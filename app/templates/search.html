@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search Products</h2>
+<form method="POST" class="mb-4">
+  {{ form.hidden_tag() }}
+  <div class="input-group">
+    {{ form.query(class="form-control", placeholder="Search...") }}
+    <button class="btn btn-outline-secondary">{{ form.submit.label }}</button>
+  </div>
+</form>
+
+<div class="row">
+  {% for product in products %}
+  <div class="col-md-4">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p>{{ product.description }}</p>
+        <p>Price: ${{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

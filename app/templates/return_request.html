@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Return Request</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div class="mb-3">{{ form.order_id.label }} {{ form.order_id(class="form-control") }}</div>
+  <div class="mb-3">{{ form.reason.label }} {{ form.reason(class="form-control") }}</div>
+  <div>{{ form.submit(class="btn btn-danger") }}</div>
+</form>
+{% endblock %}

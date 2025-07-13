@@ -1,0 +1,83 @@
+body {
+    background-color: #dedede;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    background-color: #abbed1;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #1a1a1a;
+    padding: 20px;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Ensures the card expands vertically */
+    height: 100%; /* Makes the card stretch to fill the container */
+}
+
+.glass-card:hover {
+    transform: scale(1.02);
+}
+
+.glass-cardHE {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #1a1a1a;
+}
+
+.footeri {
+  background-color: #f8f9fa;
+}
+
+.tbclogo {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between elements */
+    flex-grow: 1; /* Ensure body fills the remaining space */
+}
+
+/* Ensure equal height of cards */
+.col-md-4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.badge.bg-success {
+    margin-bottom: 1rem; /* Add margin between price and buttons */
+}
+
+.d-flex {
+    gap: 10px; /* Space between View and Wishlist buttons */
+}
+
+.w-100 {
+    width: 100%; /* Make buttons fill the width of their container */
+}
+
+/* Add margin between delete button and other elements */
+form button {
+    margin-top: 1rem;
+}

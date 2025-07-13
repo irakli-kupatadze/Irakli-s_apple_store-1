@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ product.name }}</h2>
+<p>{{ product.description }}</p>
+<p><strong>Price:</strong> ${{ product.price }}</p>
+
+{% if current_user.is_authenticated %}
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div class="mb-2">{{ form.content.label }} {{ form.content(class="form-control") }}</div>
+  <div class="mb-2">{{ form.rating.label }} {{ form.rating(class="form-control") }}</div>
+  <div>{{ form.submit(class="btn btn-primary") }}</div>
+</form>
+{% endif %}
+
+<h4 class="mt-4">Comments</h4>
+{% for comment in comments %}
+<div class="border p-2 mb-3">
+  <strong>{{ comment.user.username }}</strong> rated ⭐{{ comment.rating }}<br>
+  {{ comment.content }}
+</div>
+{% endfor %}
+{% endblock %}

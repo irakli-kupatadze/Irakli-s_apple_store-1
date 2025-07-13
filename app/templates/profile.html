@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Profile</h2>
+<p>Welcome, {{ current_user.username }}!</p>
+<p>Email: {{ current_user.email }}</p>
+<a href="{{ url_for('main.return_request') }}" class="btn btn-outline-danger mt-3">Return a Product</a>
+{% endblock %}
