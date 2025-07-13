@@ -11,8 +11,6 @@
         <h5 class="card-title">{{ item.product.name }}</h5>
         <p class="card-text">{{ item.product.description }}</p>
         <p class="card-text"><strong>Price: ${{ item.product.price }}</strong></p>
-
-        
         <a href="{{ url_for('main.remove_from_wishlist', item_id=item.id) }}"
            class="btn btn-sm btn-outline-danger">
           ❌ Remove
